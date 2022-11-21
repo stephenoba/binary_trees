@@ -33,7 +33,7 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 				else
 				{
 					temp = tree->parent->parent;
-					if (temp && temp != tree->parent)
+					if (temp && temp->right != tree->parent)
 					{
 						binary_tree_preorder(temp->right, func);
 					}
