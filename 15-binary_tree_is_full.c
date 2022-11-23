@@ -66,7 +66,7 @@ int _pow(int base, int exp)
 		res *= base;
 		--exp;
 	}
-	return res;
+	return (res);
 }
 
 /**
@@ -79,7 +79,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 {
 	int max_nodes;
 
-	if (tree)
+	if (tree && tree->left && tree->right)
 	{
 		max_nodes = _pow(2, height(tree) - 1);
 		if (max_nodes == num_leaves(tree))
